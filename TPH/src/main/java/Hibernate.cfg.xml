@@ -29,7 +29,7 @@
 
 		<property name="hbm2ddl.auto">create</property>
 
-		<!--<mapping resource="dao/Reunion.hbm.xml" /> -->
+		<mapping resource="dao/Reunion.hbm.xml" />
 		<!--<mapping resource="dao/Personne.hbm.xml" /> -->
 		<!--<mapping resource="dao/Commande.hbm.xml"/> -->
 		<!--<mapping resource ="dao/Produit.hbm.xml"/> -->
