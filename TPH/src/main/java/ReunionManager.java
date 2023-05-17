@@ -2,6 +2,7 @@ import org.apache.log4j.PropertyConfigurator;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Expression;
+import org.junit.Test;
 
 import dao.Personne;
 import dao.Reunion;
@@ -68,6 +69,7 @@ public class ReunionManager {
 	}
 
 	public static void main(String[] args) {
+		PropertyConfigurator.configure(Thread.currentThread().getContextClassLoader().getResource("log4j.properties"));
 //		 Créer des réunions
 		ReunionManager gestManager = new ReunionManager();
 		Reunion temp = new Reunion("conseil", new Date());
