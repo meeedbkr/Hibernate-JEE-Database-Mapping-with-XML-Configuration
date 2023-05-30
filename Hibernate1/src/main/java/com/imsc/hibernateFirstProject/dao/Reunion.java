@@ -1,11 +1,14 @@
 package com.imsc.hibernateFirstProject.dao;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Reunion {
 	private Long idReunion;
 	private Date dateReunion;
 	private String titleReunion;
+	private Set<Personne> personnes = new HashSet();
 
 	public Reunion() {
 	}
@@ -37,6 +40,22 @@ public class Reunion {
 
 	public void setTitleReunion(String titleReunion) {
 		this.titleReunion = titleReunion;
+	}
+
+	public Set getPersonnes() {
+		return personnes;
+	}
+
+	public void setPersonnes(Set personnes) {
+		this.personnes = personnes;
+	}
+
+	@Override
+	public String toString() {
+		return "Reunion [idReunion=" + 
+	idReunion + ", dateReunion=" + 
+	dateReunion + ", titleReunion=" + 
+	titleReunion + "]";
 	}
 
 }

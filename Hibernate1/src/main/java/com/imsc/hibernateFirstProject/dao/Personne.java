@@ -50,4 +50,10 @@ public class Personne {
 		this.reunions = reunions;
 	}
 
+	@Override
+	public String toString() {
+		return "Personne [idPersonne=" + idPersonne + ", nomPersonne=" + nomPersonne + ", PrenomPersonne="
+				+ PrenomPersonne + ", age=" + age + ", reunions=" + reunions + "]";
+	}
+
 }

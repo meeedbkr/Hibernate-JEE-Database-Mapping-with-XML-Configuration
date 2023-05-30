@@ -7,5 +7,9 @@
 		</id>
 		<property name="titleReunion" column="TITRE" />
 		<property name="dateReunion" column="DATE_REUNION" />
+		<set name="personnes" table="PERS_REUNIONS" inverse="true">
+			<key column="ID_REUNION" />
+			<many-to-many column="ID_PERSONNE" class="Personne" />
+		</set>
 	</class>
 </hibernate-mapping>

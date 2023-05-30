@@ -3,6 +3,7 @@ package com.imsc.hibernateFirstProject.manager;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import org.hibernate.Session;
 
@@ -89,7 +90,8 @@ public class ReunionManager {
 			Reunion r = (Reunion) reunions.next();
 			System.out.println(r.getTitleReunion() + "--" + r.getDateReunion());
 		}
-
+		
+		
 		HibernateUtil.getSessionFactory().close();
 	}
 
