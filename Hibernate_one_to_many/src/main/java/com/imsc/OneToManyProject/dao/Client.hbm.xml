@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="com.imsc.OneToManyProject.dao.Client" table="clients" >
+ <id name="idClient" column="ID_CLIENT">
+ <generator class="increment"/>
+ </id>
+ <property name="nomClient" column="NOM_CLIENT"/>
+ <property name="prenomClient" column="PRENOM_CLIENT"/>
+ <property name="societe" column="SOCIETE"/>
+ <property name="adresse" column="ADRESSE"/>
+ <set name="factures" inverse="true" cascade="all" fetch="join">
+ <key column="ID_CLIENT"/>
+ <one-to-many class="com.imsc.OneToManyProject.dao.Facture"/>
+ </set>
+ </class>
+</hibernate-mapping>

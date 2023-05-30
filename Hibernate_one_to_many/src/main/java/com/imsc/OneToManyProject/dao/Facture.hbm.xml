@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.imsc.OneToManyProject.dao.Facture">
+		<id name="idFacture" column="ID_FACTURE">
+			<generator class="increment" />
+		</id>
+		<property name="dateFacture" column="DATE_FACTURE" />
+		<property name="montant" column="MONTANT" />
+		<many-to-one name="client" column="ID_CLIENT" fetch="join" />
+	</class>
+</hibernate-mapping>

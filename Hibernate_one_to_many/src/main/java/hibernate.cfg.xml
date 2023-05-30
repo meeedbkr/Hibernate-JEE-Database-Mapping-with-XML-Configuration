@@ -3,7 +3,7 @@
 <hibernate-configuration>
 	<session-factory>
 		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="connection.url">jdbc:mysql://localhost:3306/hibernatexml</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernatexml_1</property>
 		<property name="connection.username">root</property>
 		<property name="connection.password"></property>
 		<property name="connection.pool_size">1</property>
@@ -12,7 +12,7 @@
 		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
 		<property name="show_sql">false</property>
 		<property name="hbm2ddl.auto">create</property>
-		<mapping resource="com/imsc/hibernateFirstProject/dao/Reunion.hbm.xml" />
-		<mapping resource="com/imsc/hibernateFirstProject/dao/Personne.hbm.xml" />
+		<mapping resource="com/imsc/OneToManyProject/dao/Facture.hbm.xml" />
+		<mapping resource="com/imsc/OneToManyProject/dao/Client.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
